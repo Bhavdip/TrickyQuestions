@@ -124,4 +124,78 @@ In the case of String s = "Test", a String with the value “Test” will be cre
 
 However, if you use String s = new String("Test"), in addition to creating a String with the value “Test” in the String pool, that String object will then be passed to the constructor of the String Object (i.e., new String("Test")) and will create another String object (not in the String pool) with that value. Each such call will therefore create an additional String object (e.g., String s2 = new String("Test") would create an addition String object, rather than just reusing the same String object from the String pool).
 
+**Which Design Patterns have You Used in Your Java Project?**
+Always expect some design patterns related question for Core Java Interview of senior developer position.
 
+**Do you know about Open Closed Design Principle or Liskov Substitution Principle?**
+Design patterns are based on object-oriented design principles, which I strongly felt every object-oriented developer and the programmer should know, or, at least, have a basic idea of what are these principles and how they help you to write better object oriented code. I
+
+if you don't know the answer to this question, you can politely say No, as it's not expected from you to know the answer to every question, but by answering this question, you can make your claim stronger as many experienced developers fail to answer basic questions like this. See Clean Code to learn more about object-oriented and SOLID design principles.
+
+```Java
+class Report {
+
+    enum Type {
+
+        ORDERS_PER_DAY, CONVERSION_RATES
+
+    }
+
+    Type type;
+
+    String generate() {
+
+        ...
+
+        switch (type) {
+
+            case ORDERS_PER_DAY:
+
+                // do stuff
+
+                break;
+
+            case CONVERSION_RATES:
+
+                // do stuff
+
+                break;
+
+        }
+
+        ...
+
+    }
+
+}
+```
+Then you extract proper abstractions:
+```Java
+interface Report {
+
+    String generate();
+
+}
+```
+Then, you implement each of your features using these abstractions in separate source files:
+``Java
+class OrdersPerDayReport implements Report {
+
+    public String generate() {
+
+        // do stuff
+
+    }
+
+}
+
+class ConversionRatesReport implements Report {
+
+    public String generate() {
+
+        // do stuff
+
+    }
+
+}
+```
