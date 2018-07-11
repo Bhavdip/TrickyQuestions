@@ -16,7 +16,27 @@ class Student{
 
 public static void main(String arg[]){
     Student s = new Student();
-    s.getScore();
+    s.getScore(10);
+}
+```
+If both methods has different parameter types (so, they have different signature), then it is possible. It is called overloading.
+
+
+```Java
+class Student{
+
+    int getScore(int studentId){
+
+    }
+
+    String getScore(String ClassId){
+
+    }
+}
+
+public static void main(String arg[]){
+    Student s = new Student();
+    s.getScore(10); //this works!
 }
 ```
 
