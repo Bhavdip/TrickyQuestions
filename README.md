@@ -206,3 +206,11 @@ class ConversionRatesReport implements Report {
 
 **What is AIDL?**
 AIDL (Android Interface Definition Language) is similar to other IDLs you might have worked with. It allows you to define the programming interface that both the client and service agree upon in order to communicate with each other using interprocess communication (IPC). On Android, one process cannot normally access the memory of another process. So to talk, they need to decompose their objects into primitives that the operating system can understand, and marshall the objects across that boundary for you. The code to do that marshalling is tedious to write, so Android handles it for you with AIDL.
+
+**Reason for OutOfMemory**
+In order to prevent it, first we need to know the reasons of "Out of Memory" exception:
+
+The biggest reason is memory leak i.e, Context leaking or can say Activity Leaking, a Service has the same problems as Activity in this regard.
+
+You are doing the process that demands continuous memory and at a point, it goes beyond max memory limit of a process.
+When you are dealing with large Bitmap and load all of them at runtime.
