@@ -214,3 +214,16 @@ The biggest reason is memory leak i.e, Context leaking or can say Activity Leaki
 
 You are doing the process that demands continuous memory and at a point, it goes beyond max memory limit of a process.
 When you are dealing with large Bitmap and load all of them at runtime.
+
+**What are the advantages of using Kotlin?**
+
+    Lambda expressions + Inline functions
+    Extension functions
+    Null-safety
+    Smart casts
+    Properties
+    Primary constructors
+    First-class delegation
+    Type inference for variable and property types
+    Singletons
+
