@@ -40,10 +40,10 @@ public static void main(String arg[]){
 }
 ```
 
-What is reflection and what its used?
+**What is reflection and what its used?**
 
-Does the finally execute in Java?
-System crash, System.exit() such case not.
+**Does the finally execute in Java?**
+> System crash, System.exit() such case not.
 
 
 ```Java
@@ -67,6 +67,13 @@ public class Application {
     }
 }
 ```
+> Application.java:5: error: Illegal static declaration in inner class Constants
+            public static String name = "PI";
+                                 ^
+  modifier 'static' is only allowed in constant variable declarations
+1 error
+
+
 ```Java
 class Fruit {
     protected static String name = "Sue";
