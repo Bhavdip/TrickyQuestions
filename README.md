@@ -169,7 +169,9 @@ class Report {
 
 }
 ```
+
 Then you extract proper abstractions:
+
 ```Java
 interface Report {
 
@@ -177,8 +179,10 @@ interface Report {
 
 }
 ```
+
 Then, you implement each of your features using these abstractions in separate source files:
-``Java
+
+```Java
 class OrdersPerDayReport implements Report {
 
     public String generate() {
